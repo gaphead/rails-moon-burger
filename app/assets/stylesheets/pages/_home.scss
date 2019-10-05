@@ -37,12 +37,12 @@
 }
 
 body {
+  text-decoration: none;
   background-image: url(/assets/moon.jpg);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  text-decoration: none;
-  // background-color: black;
+  background-color: black;
 }
 
 span {
