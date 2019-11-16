@@ -20,14 +20,25 @@
   visibility: visible;
 }
 
+#count-container {
+  position: absolute;
+}
+
+#count {
+  position: relative;
+  left: 40px;
+  color: rgb(220, 220, 220);
+  font-size: 16px;
+}
+
 #links {
   position: relative;
 }
 
 #ghub {
   position: absolute;
-  bottom: 80px;
-  right: 40px;
+  // bottom: 80px;
+  // right: 40px;
   font-size: 20px;
   color: white;
 }
@@ -37,11 +48,11 @@
 }
 
 body {
-  text-decoration: none;
   background-image: url(/assets/moon.jpg);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  text-decoration: none;
   background-color: black;
 }
 
