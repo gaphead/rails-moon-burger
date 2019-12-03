@@ -5,19 +5,29 @@
   <body>
     <div class="container mt-5 text-center">
 
-      <div class="btn btn-outline-secondary text-right mb-5" id="start">
-        <span>Send veggie burger to the moon</span>
+      <div class="column d-flex flex-direction-row">
+        <div class="row justify-content-space-between">
+          <div id="count-container" class="text-left">
+            <p id="count"> <%= @stat.count %> </p>
+          </div>
+
+
+          <div class="btn btn-outline-secondary text-right mb-5" id="start">
+            <%= link_to 'Send veggie burger to the moon', burgers_create_path, method: :post %>
+          </div>
+        </div>
       </div>
 
       <div id ="animate">
       </div>
 
-    <!-- end .container  -->
+    <!-- end .container -->
     </div>
 
+    <!--
     <div id="links">
       <a href="https://github.com/gaphead" id="ghub"><i class="fab fa-github"></i></a>
-    </div>
+    </div> -->
 
     <script>
       const anim = document.getElementById("animate");
