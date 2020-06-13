@@ -16,3 +16,16 @@
 @import "bootstrap/scss/bootstrap";
 
 @import "pages/_index";
+
+
+a {
+  color: rgb(220, 220, 220);
+}
+
+a:hover {
+  color: rgb(220, 220, 220);
+}
+
+a:link {
+  text-decoration: none;
+}

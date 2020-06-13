@@ -7,14 +7,21 @@
 
       <div class="column d-flex flex-direction-row">
         <div class="row justify-content-space-between">
+
+          <!-- count -->
           <div id="count-container" class="text-left">
-            <p id="count"> <%= @stat.count %> </p>
+            <p id="count" data-count="<%= @stat.count %>">
+              <%= @stat.count %>
+            </p>
           </div>
 
+            <%#= link_to 'Send veggie burger to the moon', burgers_create_path, method: :post %>
 
-          <div class="btn btn-outline-secondary text-right mb-5" id="start">
-            <%= link_to 'Send veggie burger to the moon', burgers_create_path, method: :post %>
-          </div>
+          <%= link_to burgers_create_path, method: :post do %>
+            <div class="btn btn-outline-secondary text-right mb-5" id="start">
+              <span> Send veggie burger to the moon </span>
+            </div>
+          <% end %>
         </div>
       </div>
 
@@ -32,7 +39,6 @@
     <script>
       const anim = document.getElementById("animate");
       const btn = document.getElementById("start");
-
 
       function animate() {
         let xPos = 0;
@@ -93,6 +99,9 @@
       }
 
       btn.addEventListener(("click"), () => {
+
+        const counter = document.getElementById("count");
+
         anim.style.visibility = "hidden";
         btn.style.visibility = "hidden";
         let xSize = 0;
@@ -102,6 +111,9 @@
 
         // runs animation
         animate();
+
+        // updates counter
+        counter.innerHTML = Number(counter.getAttribute('data-count')) + 1;
       })
 
     </script>
